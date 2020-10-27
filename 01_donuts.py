@@ -10,8 +10,12 @@ e donuts(23) retorna 'Number of donuts: many'
 """
 
 def donuts(count):
-    # +++ SUA SOLUÇÃO +++
-    return
+    # solucao pythonica: return f'Number of donuts: {count if count < 10 else "many"}'
+    if count < 10:
+        result = f'Number of donuts: {count}'
+    else:
+        result = 'Number of donuts: many'
+    return result
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
