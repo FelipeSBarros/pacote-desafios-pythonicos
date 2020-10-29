@@ -13,8 +13,9 @@ Assuma que a e b tem tamanho 2 ou maior.
 """
 
 def mix_up(a, b):
-    primchar_a, primchar_b = a[:2], b[:2]
-    return f"{primchar_b + a[2:]} {primchar_a + b[2:]}"
+    #primchar_a, primchar_b = a[:2], b[:2]
+    #return f"{primchar_b + a[2:]} {primchar_a + b[2:]}"
+    return " ".join([''.join([b[:2], a[2:]]), ''.join([a[:2], b[2:]])])
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
