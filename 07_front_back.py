@@ -10,20 +10,32 @@ Exemplo: 'abcde', a metade da frente é 'abc' e a de trás é 'de'.
 Finalmente, dadas duas strings a e b, retorne uma string na forma:
 a-frente + b-frente + a-trás + b-trás
 """
+import math
+
 def front_back(a, b):
-    if (len(a) % 2) == 0:
-        a_frente = a[: int(len(a)/2)]
-        a_tras = a[int(len(a)/2):]
-    else:
-        a_frente = a[: int(len(a) / 2)+1]
-        a_tras = a[int(len(a) / 2)+1:]
-    if (len(b) % 2) == 0:
-        b_frente = b[: int(len(b)/2)]
-        b_tras = b[int(len(b)/2):]
-    else:
-        b_frente = b[: int(len(b) / 2)+1]
-        b_tras = b[int(len(b) / 2)+1:]
-    return f"{a_frente}{b_frente}{a_tras}{b_tras}"
+    # solução 1
+    # if (len(a) % 2) == 0:
+    #     a_frente = a[: int(len(a)/2)]
+    #     a_tras = a[int(len(a)/2):]
+    # else:
+    #     a_frente = a[: int(len(a) / 2)+1]
+    #     a_tras = a[int(len(a) / 2)+1:]
+    # if (len(b) % 2) == 0:
+    #     b_frente = b[: int(len(b)/2)]
+    #     b_tras = b[int(len(b)/2):]
+    # else:
+    #     b_frente = b[: int(len(b) / 2)+1]
+    #     b_tras = b[int(len(b) / 2)+1:]
+    # return f"{a_frente}{b_frente}{a_tras}{b_tras}"
+
+    # Solucao 2
+    def frente(s):
+        return s[:math.ceil(len(s)/2)]
+
+    def tras(s):
+        return s[math.ceil(len(s) / 2):]
+
+    return f"{frente(a)}{frente(b)}{tras(a)}{tras(b)}"
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
