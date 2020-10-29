@@ -13,8 +13,8 @@ Assuma que a e b tem tamanho 2 ou maior.
 """
 
 def mix_up(a, b):
-    # +++ SUA SOLUÇÃO +++
-    return
+    primchar_a, primchar_b = a[:2], b[:2]
+    return f"{primchar_b + a[2:]} {primchar_a + b[2:]}"
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
