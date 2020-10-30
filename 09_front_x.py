@@ -12,10 +12,10 @@ antes de combina-las.
 """
 
 def front_x(words):
-    words.sort()
-    x_list = [x for x in words if x.startswith('x')]
-    w_list = [x for x in words if not x.startswith('x')]
-    return x_list + w_list
+    # words.sort()
+    # x_list = [x for x in words if x.startswith('x')]
+    # w_list = [x for x in words if not x.startswith('x')]
+    return sorted(words, key = lambda w: (not w.startswith('x'), w))
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
