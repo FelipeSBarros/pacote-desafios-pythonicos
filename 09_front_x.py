@@ -13,8 +13,8 @@ antes de combina-las.
 
 def front_x(words):
     words.sort()
-    x_list = [x for x in words if x.find('x')==0]
-    w_list = [x for x in words if x.find('x')!=0]
+    x_list = [x for x in words if x.startswith('x')]
+    w_list = [x for x in words if not x.startswith('x')]
     return x_list + w_list
 
 
